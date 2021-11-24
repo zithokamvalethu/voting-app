@@ -1,0 +1,75 @@
+*{
+  padding: 0.4rem;
+
+background-color: gainsboro;
+}
+form{
+  
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: auto;
+  padding-bottom: 4rem;
+ background-color:cornsilk;
+
+}
+
+
+input {
+  padding: 10px;
+  margin:10px 0;
+    padding:10px;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+
+button[type=submit] {
+   padding:10px;
+  border:none;
+  background-color:black;
+  color:#fff;
+  font-weight:600;
+  border-radius:5px;
+  width:100%;
+
+}
+
+table {
+  border-collapse: collapse;
+}
+input[type=radio]:checked ~ .check {
+  border: 5px solid darkgray;
+}
+
+input[type=radio]:checked ~ .check::before{
+  background: darkgray;
+}
+
+input[type=radio]:checked ~ label{
+  color: darkgray;
+}
+
+table.list {
+  width: 50%;
+}
+
+th {
+  border: 2px solid ;
+  text-align: left;
+  padding: 10px;
+width: 18rem;
+}
+tr:nth-child(even),
+table.list thead > tr {
+    text-decoration: none;
+  color:black;
+  background-color:honeydew;
+  font-size: large;
+ 
+}
+
+h1{
+   text-align: center;
+}
+
