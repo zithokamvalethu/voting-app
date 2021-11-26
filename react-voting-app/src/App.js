@@ -25,8 +25,14 @@ function App() {
     if (name && id && address && party) {
       setPeople([...people, formData]);
     }
-    console.log(formData);
+   
   };
+    const deleteParty = (party) => {
+    const handleDelete = [...people];
+    handleDelete.splice(people.party, 1);
+    setPeople(handleDelete);
+  };
+  
   return (
     <div>
       <h1>Voting App</h1>
@@ -39,9 +45,8 @@ function App() {
 
       <Table
         people={people}
-        handleRemoveItem
-       
-      />
+        deleteParty={ deleteParty}
+     />
     </div>
   );
 }

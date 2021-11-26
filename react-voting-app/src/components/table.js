@@ -1,17 +1,7 @@
 import React from "react";
 
 const Table = (props) => {
-  const { people } = props;
-
-
-  const deleteParty=(party) =>{
-    return () => {
-      const setState=(prevState => ({
-        people: prevState.people.filter(person => person.party !== party)
-      }));
-    };
-  }
-  
+  const { people} = props;
 
   return (
     <div>
@@ -35,7 +25,7 @@ const Table = (props) => {
               <td>{person.party}</td>
               <div className="deleteBtn">
                 <td>
-                  <button onClick={deleteParty(person.party)}>DELETE</button>
+                  <button onClick={()=>props.deleteParty()} >DELETE</button>
                 </td>
               </div>
             </tr>
